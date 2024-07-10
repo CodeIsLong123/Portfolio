@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
+import { animate } from 'framer-motion';
+import AnimatedArrow from './AnimatedArrow';
+
+
 
 const FrontPage = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -26,10 +30,15 @@ const FrontPage = () => {
 
   return (
     <>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <div>
+      
     <div id="frontPage" className="w-full min-h-screen flex flex-col">
       <div className="relative w-full min-h-screen">
         <div className="w-full h-screen flex flex-col items-center justify-center">
+        
           <h1 className="flex sm:text-3xl font-italic">
+          
             <TypeAnimation
               sequence={[
                 'Welcome',
@@ -41,9 +50,7 @@ const FrontPage = () => {
                 ':)',
                 2000,
                 'Enjoy!', 
-                () => {
-                  console.log('jan');
-                },
+                2000,
               ]}
               wrapper="div"
               cursor={true}
@@ -51,6 +58,9 @@ const FrontPage = () => {
               style={{ fontSize: '2em', paddingLeft: '5px', color: 'orange' }}
             />
           </h1>
+
+          
+          
           <div className="mt-4 flex justify-center pt-5 max-w-[200] w-full gap-10 ">
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn className="cursor-pointer" size={30} color="orange" />
@@ -58,16 +68,22 @@ const FrontPage = () => {
             <a href="https://github.com" target="_blank" rel="noopener noreferrer">
               <BsGithub className="cursor-pointer" size={30} color="orange" />
             </a>
+            
+          </div>
+          <div className="mt-8 justify-evenly ">
+            <AnimatedArrow />
+          </div>
           </div>
         </div>
+        
         <div className="w-full min-h-screen flex items-center justify-end pt-16">
           <div
             className={`bg-transparent p-6 transform transition-all duration-1000 ${
               scrollPosition > 400 ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
             }`}
-            style={{ maxWidth: '500px', marginRight: '100px', color: 'orange'}}
+            style={{ maxWidth: '35%', marginRight: '10%', marginTop:" 5%",color: 'orange'}}
           >
-            <h2 className="text-2xl font-bold mb-4 text-orange-400">About Us</h2>
+            <h2 className="text-2xl font-bold mb-4 text-orange-400">About Me</h2>
             <p className="text-orange-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
               Vivamus hendrerit arcu sed erat molestie vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -79,15 +95,17 @@ const FrontPage = () => {
             className={`bg-transparent p-6 transform transition-all duration-1000 ${
               scrollPosition > 900 ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
             }`}
-            style={{ maxWidth: '500px', marginRight: '800px' }}
+            style={{ maxWidth: '35%', marginRight: '55%', color: 'orange', marginTop: '-5%'}}
           >
-            <h2 className="text-2xl font-bold mb-4 text-orange-400">Our Mission</h2>
+            <h2 className="text-2xl font-bold mb-4 text-orange-400">Irgendwas anderes</h2>
             <p className="text-orange-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
               Vivamus hendrerit arcu sed erat molestie vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
+          
         </div>
+        
       </div>
       <style jsx>{`
         #frontPage::before {

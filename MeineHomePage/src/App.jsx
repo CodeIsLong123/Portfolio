@@ -8,6 +8,7 @@ import Calendar  from './components/Calendar';
 import './styles/App.css';
 import './styles/Frontpage.css';
 
+
 // Assuming you'll create these components later
 import About from './components/About';
 
@@ -17,6 +18,7 @@ function App() {
     <Router>
       <div className="app-container">
         <Sidenav />
+      
         <div className="main-content">
           
           <Routes>

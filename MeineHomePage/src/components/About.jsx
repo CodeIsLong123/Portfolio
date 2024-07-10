@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { SiReact, SiNodedotjs, SiMongodb, SiPython, SiTensorflow, SiOpencv, SiFirebase, SiRedux } from 'react-icons/si';
+import { SiReact, SiNodedotjs, SiMongodb,SiFlask, SiPostgresql, SiFastapi, SiPython, SiTensorflow, SiOpencv, SiFirebase, SiRedux, SiSpacy, SiFsharp } from 'react-icons/si';
 
 const projects = [
   { 
@@ -9,18 +9,50 @@ const projects = [
     description: 'HerBERT - An information extraction pipeline for NHMD-Herbarium-sheets', 
     github: 'https://github.com/boussnina/HerBERTa', 
     // demo: 'https://demo1.com', 
-    tech: ['Python'],
-    color: 'from-orange-200 to-yellow-500'
+    tech: ['Python',"Spacy", "Yolov8"],
+    color: 'from-orange-300 to-yellow-600'
   },
   { 
     id: 2, 
-    title: 'Bachelor Project: HerBERTa', 
-    description: 'HerBERT - An information extraction pipeline for NHMD-Herbarium-sheets', 
-    github: 'https://github.com/boussnina/HerBERTa', 
+    title: 'Expense Tracker', 
+    description: 'Full-Stack Web Application', 
+    github: 'https://github.com/CodeIsLong123/Expense-Tracker', 
     // demo: 'https://demo1.com', 
-    tech: ['Python'],
-    color: 'from-orange-200 to-yellow-500'
-  }
+    tech: ['Python', "React", "PostgreSQL", "FastAPI"],
+    color: 'from-orange-300 to-yellow-600'
+  },
+  {
+    id: 3,
+    title: 'Lil Stockzz',
+    description: 'Full Stack Web application. A stock market simulator where you can monitor stocks.',
+    github: "",
+    tech: ['Python', 'Flask', 'PostgreSQL'],
+    color: 'from-orange-300 to-yellow-600'
+  },
+  {
+    id: 4,
+    title: 'Lil Stockzz',
+    description: 'Full Stack Web application. A stock market simulator where you can monitor stocks.',
+    github: "",
+    tech: ['Python', 'Flask', 'PostgreSQL'],
+    color: 'from-orange-300 to-yellow-600'
+  },
+  {
+    id: 4,
+    title: 'Lil Stockzz',
+    description: 'Full Stack Web application. A stock market simulator where you can monitor stocks.',
+    github: "",
+    tech: ['Python', 'Flask', 'PostgreSQL'],
+    color: 'from-orange-300 to-yellow-600'
+  },
+  {
+    id: 4,
+    title: 'Lil Stockzz',
+    description: 'Full Stack Web application. A stock market simulator where you can monitor stocks.',
+    github: "",
+    tech: ['Python', 'Flask', 'PostgreSQL'],
+    color: 'from-orange-300 to-yellow-600'
+  },
 ];
 
 const TechIcon = ({ tech }) => {
@@ -32,7 +64,12 @@ const TechIcon = ({ tech }) => {
     'TensorFlow': SiTensorflow,
     'OpenCV': SiOpencv,
     'Firebase': SiFirebase,
-    'Redux': SiRedux
+    'Redux': SiRedux,
+    'Flask': SiFlask,
+    'PostgreSQL': SiPostgresql,
+    'FastAPI': SiFastapi,
+    'Spacy': SiSpacy,
+
   };
   const Icon = iconMap[tech];
   return Icon ? <Icon className="text-white text-xl" title={tech} /> : null;
@@ -60,7 +97,7 @@ const ProjectCard = ({ project }) => {
           <FaGithub className="mr-1" size={16} />
           <span className="font-semibold">Code</span>
         </a>
-        <a
+        {/* <a
           href={project.demo}
           target="_blank"
           rel="noopener noreferrer"
@@ -68,7 +105,7 @@ const ProjectCard = ({ project }) => {
         >
           <FaExternalLinkAlt className="mr-1" size={14} />
           <span className="font-semibold">Demo</span>
-        </a>
+        </a> */}
       </div>
     </div>
   );
