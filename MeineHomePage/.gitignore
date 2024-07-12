@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+## folder 
+node_modules
+dist
+src/api
+src/components/Contacts.jsx

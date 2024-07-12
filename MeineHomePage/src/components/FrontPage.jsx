@@ -50,11 +50,12 @@ const FrontPage = () => {
                 ':)',
                 2000,
                 'Enjoy!', 
-                2000,
+                10000,
               ]}
               wrapper="div"
               cursor={true}
-              repeat={true}
+              repeat={Infinity}
+
               style={{ fontSize: '2em', paddingLeft: '5px', color: 'orange' }}
             />
           </h1>
@@ -85,8 +86,9 @@ const FrontPage = () => {
           >
             <h2 className="text-2xl font-bold mb-4 text-orange-400">About Me</h2>
             <p className="text-orange-300">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-              Vivamus hendrerit arcu sed erat molestie vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              I am 24 old, Copenhagen based, computer science student from Germany. 
+              I love to code and create new things such as the page you are looking at right now. 
+              I am a passionate developer and always looking for new challenges. 
             </p>
           </div>
         </div>
@@ -97,10 +99,12 @@ const FrontPage = () => {
             }`}
             style={{ maxWidth: '35%', marginRight: '55%', color: 'orange', marginTop: '-5%'}}
           >
-            <h2 className="text-2xl font-bold mb-4 text-orange-400">Irgendwas anderes</h2>
+            <h2 className="text-2xl font-bold mb-4 text-orange-400">Background</h2>
             <p className="text-orange-300">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-              Vivamus hendrerit arcu sed erat molestie vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              I am currently studying computer science at the University of Copenhagen. 
+              I handed in my thesis in june 2024 and now i miss one course, that i will finish in the next semester.
+              Now i am looking for new challenges and opportunities to grow as a developer.
+
             </p>
           </div>
           

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { SiReact, SiNodedotjs, SiMongodb,SiFlask, SiPostgresql, SiFastapi, SiPython, SiTensorflow, SiOpencv, SiFirebase, SiRedux, SiSpacy, SiFsharp } from 'react-icons/si';
+import { SiReact, SiNodedotjs, SiTailwindcss, SiMongodb,SiFlask, SiPostgresql, SiFastapi, SiPython, SiTensorflow, SiOpencv, SiFirebase, SiRedux, SiSpacy, SiFsharp } from 'react-icons/si';
 
 const projects = [
   { 
@@ -31,28 +31,12 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Lil Stockzz',
-    description: 'Full Stack Web application. A stock market simulator where you can monitor stocks.',
+    title: "My Page", 
+    description: 'Tge page you are currently on',
     github: "",
-    tech: ['Python', 'Flask', 'PostgreSQL'],
-    color: 'from-orange-300 to-yellow-600'
-  },
-  {
-    id: 4,
-    title: 'Lil Stockzz',
-    description: 'Full Stack Web application. A stock market simulator where you can monitor stocks.',
-    github: "",
-    tech: ['Python', 'Flask', 'PostgreSQL'],
-    color: 'from-orange-300 to-yellow-600'
-  },
-  {
-    id: 4,
-    title: 'Lil Stockzz',
-    description: 'Full Stack Web application. A stock market simulator where you can monitor stocks.',
-    github: "",
-    tech: ['Python', 'Flask', 'PostgreSQL'],
-    color: 'from-orange-300 to-yellow-600'
-  },
+    tech: ['React', 'TailwindCSS'],
+    color: 'from-orange-300 to-yellow-600'  
+  }
 ];
 
 const TechIcon = ({ tech }) => {
@@ -69,6 +53,7 @@ const TechIcon = ({ tech }) => {
     'PostgreSQL': SiPostgresql,
     'FastAPI': SiFastapi,
     'Spacy': SiSpacy,
+    'TailwindCSS': SiTailwindcss,
 
   };
   const Icon = iconMap[tech];
@@ -118,14 +103,27 @@ const About = () => {
       <h1 className="text-5xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-orange-100 to-red-200">
         My Projects
       </h1>
-      <p className="text-xl text-gray-400 mb-12">Welcome to creative space</p>
+      <p className="text-xl text-gray-400 mb-12">Welcome to my creative space</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
+      <div className="mt-12 flex justify-center">
+        <p className="text-gray-400 text-center">
+          More projects on{' '}
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-400 hover:underline"
+          >
+            Github
+          </a>
+        </p>
 
+      </div>
       <style jsx>{`
         #projectPage::before {
           content: '';
